@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleekTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 4s ease-out forwards;
+        }
+
+        .float-on-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+    
+        .float-on-hover:hover {
+            transform: translateY(-10px); 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+        }
+
+    
+    </style>
+    
+
+</head>
+<body class="bg-white" style="font-family: 'Helvetica', sans-serif;">
+    <!---Navbar-->
+    <nav class="bg-white border-b border-gray-300 p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <div class="text-black font-bold text-4xl" style="font-family: 'Montserrat', sans-serif;">
+                <a href="index.html">
+                    <h1>SleekTech</h1>
+                </a>
+            </div>
+            
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 text-black font-bold text-2xl">
+                <a href="#about-us" class=" hover:text-gray-400">About</a>
+                <a href="#contact-us" class=" hover:text-gray-400">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <a href="#about-us" class="block px-4 py-2 text-sm text-black hover:text-gray-400">About</a>
+        <a href="#contact-us" class="block px-4 py-2 text-sm text-black hover:text-gray-400">Contact</a>
+    </div>
+
+    </nav>
+        <!--Logo and things--->
+        <div class="flex justify-center items-center animate-fade-in">
+            <a href="index.html" class="float-on-hover">
+            
+                <img src="/images/Logo.png" alt="SleekTech" class="h-30 w-auto object-contain mb-4">
+            </a>
+        </div>
+
+        <!---Slogan here-->
+        <div id="about-us" class="flex flex-col justify-center items-center text-center p-6">
+            <div>
+                <h1 class="text-5xl font-bold text-gray-800 mb-4" style="font-family: 'Playfair Display', serif;">
+                    Where Minimalism Meets Cutting-Edge Technology
+                </h1>
+                <p class="text-gray-600 text-lg animate-fade-in">
+                    "SleekTech brings you the pinnacle of minimalist design and advanced technology. 
+                    We specialize in offering cutting-edge laptops that blend elegance with performance. 
+                    Our curated selection is designed for those who appreciate clean aesthetics and powerful functionality. 
+                    At SleekTech, simplicity meets sophistication, ensuring that every product enhances your tech experience 
+                    with style and precision."
+                </p>
+            </div>
+        </div>
+        
+    
+    <!---content-->
+    <!-- Product Section -->
+<section class="container mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-4">Our Products</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Product Item -->
+        <div class="bg-white p-4 border rounded-lg shadow-md animate-fade-in">
+            <img src="/images/Product1_Razer_Blade_14.png" alt="Product Name" class="w-full h-50 object-cover mb-4 float-on-hover">
+            <h3 class="text-lg font-semibold">Razer Blade 14</h3>
+            <p class="text-gray-600">$1299.00</p>
+            <p class="text-gray-500">Graphics Description: RTX 3080 <br>
+                Size: Ryzen 9 5900HX <br>
+                Style: Classic Black<br>
+                Brand: Razer<br>
+                Model Name:	Razer Blade 14<br>
+                Screen Size:14 Inches<br>
+                Color:Black<br>
+                Hard Disk Size:	1 TB<br>
+                CPU Model:	Ryzen 9<br>
+                Ram Memory Installed Size:	16 GB<br>
+                Operating System:	Windows 10 Home<br>
+                Special Feature:	Backlit Keyboard, Anti Glare Coating<br>
+                Graphics Card Description:	RTX 3080</p>
+                <a href="https://www.razer.com/gaming-laptops/razer-blade-14" target="_blank" class="mt-4 inline-block bg-black text-white px-4 py-2 rounded text-center hover:bg-white hover:text-black">
+                    Show More
+                </a>
+                <a href="https://www.amazon.com/Razer-Blade-14-Gaming-Laptop/dp/B094658SMY" target="_blank" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded text-center hover:bg-white hover:text-blue-800">
+                    Buy
+                </a>
+        </div>
+
+        <div class="bg-white p-4 border rounded-lg shadow-md animate-fade-in">
+            <img src="/images/Product2_AsusROG Zephrus M16.png" alt="Product Name" class="w-full h-50 object-cover mb-4 float-on-hover">
+            <h3 class="text-lg font-semibold">ROG Zephyrus M16</h3>
+            <p class="text-gray-600">$1399.00</p>
+            <p class="text-gray-500">
+                Brand:	ASUS<br>
+                Model Name:	ROG Zaphyrus<br>
+                Screen Size:	16 Inches<br>
+                Color:	Off Black<br>
+                Hard Disk Size:	2 TB<br>
+                CPU Model:	Core i9<br>
+                Ram Memory Installed Size:	64 GB<br>
+                Operating System:	Windows 11 Pro<br>
+                Special Feature:	HD Audio, Backlit Keyboard<br>
+                Graphics Card Description:	Dedicated</p>
+                <a href="https://rog.asus.com/ph/laptops/rog-zephyrus/rog-zephyrus-m16-2023-series/" target="_blank" class="mt-4 inline-block bg-black text-white px-4 py-2 rounded text-center hover:bg-white hover:text-black">
+                    Show More
+                </a>
+                <a href="https://www.amazon.com/ASUS-Zephyrus-Display-14-Core-i9-13900H/dp/B0CYVTF2P5/ref=sr_1_1?sr=8-1" target="_blank"  class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded text-center hover:bg-white hover:text-blue-800">
+                    Buy
+                </a>
+        </div>
+        <div class="bg-white p-4 border rounded-lg shadow-md animate-fade-in">
+            <img src="/images/Product3_ASUSTUFDASH15.png" alt="Product Name" class="w-full h-50 object-cover mb-4 float-on-hover">
+            <h3 class="text-lg font-semibold">ASUS TUF DASH 15</h3>
+            <p class="text-gray-600">$999.99</p>
+            <p class="text-gray-500">
+                Brand:	ASUS<br>
+                Model Name:	TUF Dash 15 (2022)<br>
+                Screen Size:	15.6 Inches<br>
+                Color:	Off Black<br>
+                Hard Disk Size:	512 GB<br>
+                CPU Model:	Core i7<br>
+                Ram Memory Installed Size:	16 GB<br>
+                Operating System:	Windows 11 Home<br>
+                Special Feature:	Anti Glare Coating<br>
+                Graphics Card Description:	RTX 3060</p>
+            <a href= "https://www.asus.com/ph/laptops/for-gaming/tuf-gaming/2021-asus-tuf-dash-f15/techspec/" target ="_blank" class="mt-4 inline-block bg-black text-white px-4 py-2 rounded text-center hover:bg-white hover:text-black">
+                Show More
+            </a>
+            <a href="https://www.amazon.com/ASUS-Intel-I7-11370H-GEFORCE-Thunderbolt/dp/B0CGDFMMFW/ref=sr_1_1_sspa?sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" target="_blank"  class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded text-center hover:bg-white hover:text-blue-800">
+                Buy
+            </a>
+        </div>
+        <div class="bg-white p-4 border rounded-lg shadow-md animate-fade-in">
+            <img src="/images/Product4_ZephyrusG16.png" alt="Product Name" class="w-full h-50 object-cover mb-4 float-on-hover">
+            <h3 class="text-lg font-semibold">Asus ROG Zephyrus G16 </h3>
+            <p class="text-gray-600">$1419.99</p>
+            <p class="text-gray-500">
+                Brand:	ASUS <br>
+                Model Name:	Zephyrus G16 <br>
+                Screen Size:	16 Inches <br>
+                Color:	Black <br>
+                Hard Disk Size:	1 TB <br>
+                CPU Model:	Core i7 <br>
+                Ram Memory Installed Size:	16 GB <br>
+                Operating System:	Windows 11 Pro <br>
+                Special Feature:	Backlit Keyboard <br>
+                Graphics Card Description:	Dedicated <br>
+            <a href= "https://rog.asus.com/ph/laptops/rog-zephyrus/rog-zephyrus-g16-2024/" target ="_blank" class="mt-4 inline-block bg-black text-white px-4 py-2 rounded text-center hover:bg-white hover:text-black">
+                Show More
+            </a>
+            <a href="https://www.amazon.com/Zephyrus-Gaming-Laptop-i7-13620H-GeForce/dp/B0CLFKDCV3/ref=sr_1_2?sr=8-2" target="_blank"  class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded text-center hover:bg-white hover:text-blue-800">
+                Buy
+            </a>
+        </div>
+        <!---5-->
+        <div class="bg-white p-4 border rounded-lg shadow-md animate-fade-in">
+            <img src="/images/Product5_Voyager.png" alt="Product Name" class="w-full h-50 object-cover mb-4 float-on-hover">
+            <h3 class="text-lg font-semibold">Corsair Voyager a1600 </h3>
+            <p class="text-gray-600">$999.99</p>
+            <p class="text-gray-500">
+                Brand: Corsair <br>
+                Model Name:	VOYAGER a1600<br>
+                Screen Size:	16 Inches<br>
+                Color:	Black<br>
+                Hard Disk Size:	16 GB<br>
+                CPU Model:	Ryzen 7<br>
+                Ram Memory Installed Size:	16 GB<br>
+                Operating System:	Windows 11 Home<br>
+                Special Feature:	Backlit Keyboard<br>
+                Graphics Card Description:	Dedicated<br>
+            <a href= "https://www.corsair.com/us/en/p/gaming-computers/cn-9000003-na/corsair-voyager-a1600-gaming-laptop-amd-advantage-edition-ryzen-r7-radeon-6800m-16gb-ddr5-1tb-m-2-16in-240hz-display-win11-home-cn-9000003-na?srsltid=AfmBOorLbXKIenbh9Ruk6og552Rn2_yYP2ey6I7QV1pxgLFSardQxt64" target ="_blank" class="mt-4 inline-block bg-black text-white px-4 py-2 rounded text-center hover:bg-white hover:text-black">
+                Show More
+            </a>
+            <a href="https://www.amazon.com/dp/B0B4T37M86" target="_blank"  class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded text-center hover:bg-white hover:text-blue-800">
+                Buy
+            </a>
+        </div>
+        <div class="bg-white p-4 border rounded-lg shadow-md animate-fade-in">
+            <img src="/images/Product6_Alienware.png" alt="Product Name" class="w-full h-50 object-cover mb-4 float-on-hover">
+            <h3 class="text-lg font-semibold">Lenovo LOQ 15AHP9</h3>
+            <p class="text-gray-600">$899.99</p>
+            <p class="text-gray-500">
+                Brand:	Lenovo <br>
+                Model Name:	LOQ 15<br>
+                Screen Size:	15.6<br>
+                Color:	Gray<br>
+                Hard Disk Size:	512 GB<br>
+                CPU Model:	Ryzen 7<br>
+                Ram Memory Installed Size:	16 GB<br>
+                Operating System:	Windows 11 Home<br>
+                Graphics Card Description:	Dedicated<br>
+                Graphics Coprocessor:	NVIDIA GeForce RTX 4050<br>
+            <a href= "https://www.lenovo.com/ph/en/p/laptops/loq-laptops/lenovo-loq-15ahp9/len101q0008?srsltid=AfmBOoqYFdm5wkWDKMsf1vepC5l9njtWHRFE4s0eMEE_g3NhiUfQj9W2" target ="_blank" class="mt-4 inline-block bg-black text-white px-4 py-2 rounded text-center hover:bg-white hover:text-black">
+                Show More
+            </a>
+            <a href="https://www.amazon.com/Lenovo-NVIDIA%C2%AE-GeForce-Display-1920x1080/dp/B0CWB2LWRN/ref=sr_1_5?sr=8-5" target="_blank"  class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded text-center hover:bg-white hover:text-blue-800">
+                Buy
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Affiliated Companies Section -->
+<section id="affiliated-companies" class="container mx-auto p-6 bg-white shadow-md rounded-lg">
+    <h2 class="text-2xl font-bold mb-4 text-center">Our Affiliated Companies</h2>
+
+    <!-- Slider Wrapper -->
+    <div class="relative w-full overflow-hidden">
+        <!-- Logos Slider Container -->
+        <div id="logo-slider" class="flex transition-transform duration-1000 ease-in-out">
+            <!-- Logo 1 -->
+            <div class="min-w-full flex justify-center items-center p-4">
+                <img src="/images/logo1.png" alt="Company 1" class="h-20 object-contain">
+            </div>
+            
+            <!-- Logo 2 -->
+            <div class="min-w-full flex justify-center items-center p-4">
+                <img src="/images/logo2.png" alt="Company 2" class="h-20 object-contain">
+            </div>
+            
+            <!-- Logo 3 -->
+            <div class="min-w-full flex justify-center items-center p-4">
+                <img src="/images/logo3.png" alt="Company 3" class="h-20 object-contain">
+            </div>
+
+            <div class="min-w-full flex justify-center items-center p-4">
+                <img src="/images/logo4.png" alt="Company 4" class="h-20 object-contain">
+            </div>
+
+            <div class="min-w-full flex justify-center items-center p-4">
+                <img src="/images/logo5.png" alt="Company 5" class="h-20 object-contain">
+            </div>
+
+            <div class="min-w-full flex justify-center items-center p-4">
+                <img src="/images/logo6.png" alt="Company 6" class="h-20 object-contain">
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+
+
+<!-- Testimonies Section -->
+<section id="testimonies" class="container mx-auto p-6 bg-white rounded-lg shadow-md my-12">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">What Our Customers Say</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimony 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex items-center mb-4">
+                <img src="/images/customer.png" alt="Customer 1" class="w-12 h-12 rounded-full mr-4">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Remark Santiago</h3>
+                    <p class="text-sm text-gray-500">Tech Enthusiast</p>
+                </div>
+            </div>
+            <p class="text-gray-600">
+                "SleekTech's products are a perfect blend of style and performance. The laptop I bought is incredibly fast, and I love its minimalist design. Highly recommended!"
+            </p>
+        </div>
+        
+        <!-- Testimony 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex items-center mb-4">
+                <img src="/images/customer.png" alt="Customer 2" class="w-12 h-12 rounded-full mr-4">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Jonathan K. Lang</h3>
+                    <p class="text-sm text-gray-500">Freelance Designer</p>
+                </div>
+            </div>
+            <p class="text-gray-600">
+                "The build quality of SleekTech laptops is top-notch. I've never had a more reliable device. It’s sleek, powerful, and perfect for my design work."
+            </p>
+        </div>
+        
+        <!-- Testimony 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex items-center mb-4">
+                <img src="/images/customer.png" alt="Customer 3" class="w-12 h-12 rounded-full mr-4">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Alice N. Wander</h3>
+                    <p class="text-sm text-gray-500">Software Developer</p>
+                </div>
+            </div>
+            <p class="text-gray-600">
+                "I love how SleekTech combines aesthetics with functionality. My new laptop is powerful enough for all my coding needs and looks great on my desk."
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Us Section -->
+<section id="contact-us" class="container mx-auto p-6 bg-white shadow-md rounded-lg">
+    <h1 class="text-2xl font-bold mb-4">Contact Us</h1>
+    <form action="/contact" method="post" enctype="application/x-www-form-urlencoded" class="space-y-4">
+        <div>
+            <label for="name" class="block text-sm font-semibold mb-1">Name</label>
+            <input type="text" id="name" name="name" required class="w-full p-2 border border-gray-300 rounded-md">
+        </div>
+        <div>
+            <label for="email" class="block text-sm font-semibold mb-1">Email</label>
+            <input type="email" id="email" name="email" required class="w-full p-2 border border-gray-300 rounded-md">
+        </div>
+        <div>
+            <label for="subject" class="block text-sm font-semibold mb-1">Subject</label>
+            <input type="text" id="subject" name="subject" required class="w-full p-2 border border-gray-300 rounded-md">
+        </div>
+        <div>
+            <label for="message" class="block text-sm font-semibold mb-1">Message</label>
+            <textarea id="message" name="message" rows="4" required class="w-full p-2 border border-gray-300 rounded-md"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Send</button>
+    </form>
+</section>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+<!-- Footer -->
+<footer class="bg-white text-white py-6" style="font-family: 'Helvetica', sans-serif;">
+    <div class="container mx-auto text-center">
+        <p class="text-black">&copy; 2024 SleekTech. All rights reserved.</p>
+        <div class="mt-4 text-black">
+            <a href="#" class="hover:underline">Privacy Policy</a> |
+            <a href="#" class="hover:underline">Terms of Service</a> |
+            <a href="#" class="hover:underline">Contact Us</a>
+        </div>
+    </div>
+</footer>
+</html>
