@@ -35,6 +35,16 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .highlight {
+            background-color: cyan;
+            font-weight: bold;
+        }
+        
+
     
     </style>
     
@@ -53,10 +63,17 @@
             
             
             <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-6 text-black font-bold text-2xl">
-                <a href="#about-us" class=" hover:text-gray-400">About</a>
-                <a href="#contact-us" class=" hover:text-gray-400">Contact</a>
+            <div class="hidden md:flex items-center space-x-6 text-black  text-2xl">
+                <a href="#about-us" class="hover:text-gray-400 font-bold ">About</a>
+                <a href="#contact-us" class="hover:text-gray-400 font-bold ">Contact</a>
+                <section id="search-section" class="bg-white p-4 rounded-lg flex items-center space-x-4 text-2xl font-sans">
+                    <input type="text" id="search-input" placeholder="Search a keyword..." class="p-2 border border-gray-300 rounded-md w-full max-w-xs">
+                    <button id="search-button" class="bg-black text-white px-4 py-2 rounded font-bold hover:bg-white hover:text-black">Search</button>
+                </section>
             </div>
+                
+            </div>
+
 
             <!-- Mobile Menu Button -->
             <div class="md:hidden flex items-center">
@@ -291,7 +308,7 @@
     <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">What Our Customers Say</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Testimony 1 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="bg-white p-6 rounded-lg shadow-lg float-on-hover">
             <div class="flex items-center mb-4">
                 <img src="/images/customer.png" alt="Customer 1" class="w-12 h-12 rounded-full mr-4">
                 <div>
@@ -305,7 +322,7 @@
         </div>
         
         <!-- Testimony 2 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="bg-white p-6 rounded-lg shadow-lg float-on-hover">
             <div class="flex items-center mb-4">
                 <img src="/images/customer.png" alt="Customer 2" class="w-12 h-12 rounded-full mr-4">
                 <div>
@@ -319,7 +336,7 @@
         </div>
         
         <!-- Testimony 3 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="bg-white p-6 rounded-lg shadow-lg float-on-hovers">
             <div class="flex items-center mb-4">
                 <img src="/images/customer.png" alt="Customer 3" class="w-12 h-12 rounded-full mr-4">
                 <div>
@@ -355,7 +372,7 @@
             <label for="message" class="block text-sm font-semibold mb-1">Message</label>
             <textarea id="message" name="message" rows="4" required class="w-full p-2 border border-gray-300 rounded-md"></textarea>
         </div>
-        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Send</button>
+        <button type="submit" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded text-center hover:bg-white hover:text-blue-800">Send</button>
     </form>
 </section>
 
@@ -368,11 +385,11 @@
 <!-- Footer -->
 <footer class="bg-white text-white py-6" style="font-family: 'Helvetica', sans-serif;">
     <div class="container mx-auto text-center">
-        <p class="text-black">&copy; 2024 SleekTech. All rights reserved.</p>
+        <p class="text-black">&copy; 2024 SleekTech</p>
         <div class="mt-4 text-black">
-            <a href="#" class="hover:underline">Privacy Policy</a> |
-            <a href="#" class="hover:underline">Terms of Service</a> |
-            <a href="#" class="hover:underline">Contact Us</a>
+            <a href="disclaimer.html" class="hover:underline">Privacy Policy</a> |
+            <a href="disclaimer.html" class="hover:underline">Terms of Service</a> |
+            <a href="disclaimer.html" class="hover:underline">Contact Us</a>
         </div>
     </div>
 </footer>

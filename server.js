@@ -13,7 +13,7 @@ app.use(express.static('public'));
 
 // Serve HTML file
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(__dirname + '/public/index=.html');
 });
 
 // Contact Form Handling
@@ -43,8 +43,9 @@ app.post('/contact', (req, res) => {
       console.error('Error sending email:', error);
       res.status(500).send('Error sending email');
     } else {
-      console.log('Email sent:', info.response);
       res.send('Thank you for your message. We will get back to you soon.');
+      alert("Message has been send")
+      console.log('Email sent:', info.response);
     }
   });
 });
